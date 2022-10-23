@@ -1,0 +1,22 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.6.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
