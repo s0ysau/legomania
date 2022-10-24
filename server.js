@@ -7,6 +7,8 @@ const reviews = require('./models/reviews')
 const db = require('./models/db')
 
 // == Configure the app == //
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 app.use((req, res, next) => {
   res.locals.data = {}
   next()

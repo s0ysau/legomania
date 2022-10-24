@@ -14,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "markdownlint": "^0.26.2",
     "method-override": "^3.0.0",
     "mongoose": "^6.6.7",
     "react": "^18.2.0",
