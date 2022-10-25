@@ -1,12 +1,16 @@
 const React = require('react')
+const Default = require('../layouts/Default')
 
-class /*name of file*/ extends React.Component {
+class Index extends React.Component {
 	render(){
-		// A variable if needed
+		const { reviews } = this.props
 		return (
 			// Code Block
+			<ul>
+				
+			</ul>
 		)
 	}
 }
 
-module.exports = //name of file
+module.exports = Index
