@@ -3,12 +3,13 @@ require('dotenv').config()
 const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
-const reviews = require('./models/reviews')
 const db = require('./models/db')
 
 // == Configure the app == //
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+app.engine('jsx', require('jsx-view-engine').createEngine())
+app.set('view engine', 'jsx')
 app.use((req, res, next) => {
   res.locals.data = {}
   next()
@@ -21,13 +22,9 @@ db.once('open', () => {
 // == Middleware == //
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
-
+app.use('/reviews', require('./controllers/routeController'))
 
 // == Middleware == //
-
-app.get('/', (req, res) => {
-  res.send('<h1>Hello World</h1>')
-})
 
 
 // == Port == //

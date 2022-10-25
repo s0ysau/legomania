@@ -6,9 +6,31 @@ class Index extends React.Component {
 		const { reviews } = this.props
 		return (
 			// Code Block
-			<ul>
-				
-			</ul>
+			<Default title='Your Reviews Page'>
+				<ul>
+					{
+						reviews.map((reviewone) => {
+							const { theme, name, review, rating, isItFavorite } = reviewone
+							return(
+								<li key={reviewone._id}>
+									<a href={`/reviews/${reviewone._id}`}>
+										The {name} set from the {theme} collection
+									</a><br/>
+									<p>{rating}</p>
+									<p>{review}</p>
+									{
+										isItFavorite ? 'You listed this set as your favorite' : '' 
+
+									}<br/>
+									<form method='POST' action={`/reviews/${reviewone._id}?_method=DELETE`}>
+										<input type='submit' value={`Delete ${name}`}/>
+									</form>
+								</li>
+							)
+						})
+					}
+				</ul>
+			</Default>
 		)
 	}
 }

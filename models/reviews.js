@@ -4,10 +4,10 @@ const reviewSchema = new mongoose.Schema ({
   theme: { type: String, required: true},
   name: { type: String, required: true},
   review: { type: String, required: true},
-  rating: { type: Number, optional: true},
+  rating: { type: String, optional: true},
   isItFavorite: Boolean
 })
 
-const reviews = mongoose.model('reviews', reviewSchema)
+const Reviews = mongoose.model('reviews', reviewSchema)
 
-module.exports = reviews 
+module.exports = Reviews 
