@@ -8,12 +8,11 @@ class Default extends React.Component {
       <html>
         <head>
           <link rel="stylesheet" href="/css/app.css"></link> 
-										// this is for css styling
           <title>{title}</title>         
         </head>
         <nav>
-          <a></a>
-          <a></a>
+          <a className='headerbtn' href='/reviews'>HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a className='headerbtn' href='/reviews/New'>NEW REVIEW</a>
         </nav>
         <body>
           <h1>{title}</h1>
@@ -21,8 +20,8 @@ class Default extends React.Component {
         </body>
         <footer>
           <p>Created by Jerrick Lloyd C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href='https://github.com/s0ysau'>GitHub</a> &nbsp;&nbsp;&nbsp;
-          <a href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>LinkedIn</a>
+          <a className='github' href='https://github.com/s0ysau'>GitHub</a> &nbsp;&nbsp;&nbsp;
+          <a className='linkedin' href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>LinkedIn</a>
           </p>        
         </footer>
       </html>

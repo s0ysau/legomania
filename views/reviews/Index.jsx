@@ -16,10 +16,10 @@ class Index extends React.Component {
 									<a href={`/reviews/${reviewone._id}`}>
 										The {name} set from the {theme} collection
 									</a><br/>
-									<p>{rating}</p>
-									<p>{review}</p>
+									Rating: {rating}<br/>
+									Your Review: {review}<br/>
 									{
-										isItFavorite ? 'You listed this set as your favorite' : '' 
+										isItFavorite ? 'You listed this set as a favorite' : '' 
 
 									}<br/>
 									<form method='POST' action={`/reviews/${reviewone._id}?_method=DELETE`}>

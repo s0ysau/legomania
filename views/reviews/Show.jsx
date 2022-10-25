@@ -4,13 +4,17 @@ const Default = require('../layouts/Default')
 class Show extends React.Component {
 	render(){
 		// A variable if needed
-		const { theme, name, review, rating, isItFavorite } = this.props.review
+		const { theme, name, review, rating, isItFavorite, _id } = this.props.review
 		return (
 			// Code Block
 			<Default title={`${name} page`} fruit={this.props.review}>
-				<p>Rating: {rating}</p><br/>
-				<p>Review: {review}</p><br/>
-				<p>{isItFavorite ? 'Listed as your favorite' : ''}</p>
+				Rating: {rating}<br/>
+				Review: {review}<br/>
+				{isItFavorite ? 'Listed as your favorite' : ''}
+				{review ? <a href={`/reviews/${_id}/edit`}>Edit {review.name}</a> : ''}<br />
+				<form method='POST' action={`/reviews/${review._id}?_method=DELETE`}>
+					<input type='submit' value={`Delete ${name}`}/>
+				</form>
 			</Default>
 		)
 	}
