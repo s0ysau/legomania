@@ -22,9 +22,6 @@ class Index extends React.Component {
 										isItFavorite ? 'You listed this set as a favorite' : '' 
 
 									}<br/>
-									<form method='POST' action={`/reviews/${reviewone._id}?_method=DELETE`}>
-										<input type='submit' value={`Delete ${name}`}/>
-									</form>
 								</li>
 							)
 						})

@@ -1,6 +1,10 @@
 
 
 html {
+    background-image: url("../images/lego_background_one.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: rgb(5, 168, 148);
 }
 
@@ -10,9 +14,35 @@ nav {
     background-color: rgb(217, 217, 217)
 }
 
+main {
+    width: 800;
+    height: 700;
+    background-color: rgb(217, 217, 217)
+}
+
+.title {
+    text-align: center;
+}
+
+.headerbtn {
+    padding: 0 20px;
+}
+
+ul {
+    display: grid;
+}
+
+li {
+    padding: 2px;
+    margin: 8px 8px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 100px);
+    background-color: rgb(135 135 135);
+}
 
 footer {
     width: 1280;
     height: 1000;
-    background-color: rgb(217, 217, 217)
+    background-color: rgb(217, 217, 217);
+    text-align: center;
 }
