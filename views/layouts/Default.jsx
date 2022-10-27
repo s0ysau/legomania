@@ -1,19 +1,20 @@
 const React = require('react')
 
 class Default extends React.Component {
-  render (){
-    // constant 
+  render () {
+    // constant
     const { review, title } = this.props
     return (
       <html>
         <head>
-          <link rel="stylesheet" href="/css/app.css"></link> 
-          <title>{title}</title>         
+          <link rel='stylesheet' href='/css/app.css' />
+          <title>{title}</title>
         </head>
         <nav>
-          <a className='headerbtn home' href='/reviews'>HOME</a>
-          <a className='headerbtn newReview' href='/reviews/New'>NEW REVIEW</a>
+          <a className='headerbtn home' href='/legoblogs'>HOME</a>
+          <a className='headerbtn newReview' href='/legoblogs/New'>NEW REVIEW</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
+          {/* <a className='headerbtn' href='/legoblogs/Favorite'>FAVORITES</a> */}
         </nav>
         <main>
           <body>
@@ -22,10 +23,15 @@ class Default extends React.Component {
           </body>
         </main>
         <footer>
-          <p>Created by Jerrick Lloyd C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a className='github' href='https://github.com/s0ysau'>GitHub</a> &nbsp;&nbsp;&nbsp;
-          <a className='linkedin' href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>LinkedIn</a>
-          </p>        
+          <p className='p-footer'>
+            <span className='my-name'>Created by Jerrick Lloyd C</span>
+            <a className='github' href='https://github.com/s0ysau'>
+              <img className='image-logo github-logo' src='../images/github-logo.png'/>
+            </a> &nbsp;&nbsp;&nbsp;
+            <a className='linkedin' href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>
+              <img className='image-logo linkedin-logo' src='../images/linkedin-logo.png'/>
+            </a>
+          </p>
         </footer>
       </html>
     )

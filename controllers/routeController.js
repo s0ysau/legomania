@@ -4,15 +4,14 @@ const dataController = require('./dataController')
 const viewController = require('./viewController')
 
 // API Routes
-// Index 
+// Index
 // Delete
 // Update
 // Create
-// Show 
-
+// Show
 
 // non API Routes
-// Index 
+// Index
 router.get('/', dataController.index, viewController.index)
 // New
 router.get('/new', viewController.newView)
@@ -26,5 +25,8 @@ router.post('/', dataController.create, viewController.redirectShow)
 router.get('/:id/edit', dataController.show, viewController.edit)
 // Show
 router.get('/:id', dataController.show, viewController.show)
+
+router.get('/legoblogs/favorite', dataController.favorite, viewController.favorite)
+
 
 module.exports = router

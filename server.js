@@ -18,16 +18,14 @@ db.once('open', () => {
   console.log('Connected to MongoDB')
 })
 
-
 // == Middleware == //
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
-app.use('/reviews', require('./controllers/routeController'))
+app.use('/legoblogs', require('./controllers/routeController'))
 
 // == Middleware == //
 
-
 // == Port == //
-app.listen(3009, function() {
+app.listen(3009, function () {
   console.log('Listening on Port 3009')
 })
