@@ -71,6 +71,7 @@ footer {
     height: 2.5rem;
     background-color: rgb(175, 175, 175);
     text-align: center;
+    align-items: center;
 }
 .p-footer {
     margin: 5px 0;

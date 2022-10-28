@@ -26,7 +26,7 @@ router.get('/:id/edit', dataController.show, viewController.edit)
 // Show
 router.get('/:id', dataController.show, viewController.show)
 
-router.get('/legoblogs/favorite', dataController.favorite, viewController.favorite)
+router.get('/legoreviews/favorite', dataController.favorite, viewController.favorite)
 
 
 module.exports = router

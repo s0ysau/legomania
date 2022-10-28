@@ -21,7 +21,8 @@ db.once('open', () => {
 // == Middleware == //
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
-app.use('/legoblogs', require('./controllers/routeController'))
+app.use('/legoreviews', require('./controllers/routeController'))
+
 
 // == Middleware == //
 
