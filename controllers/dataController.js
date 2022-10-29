@@ -1,5 +1,6 @@
 const Review = require('../models/reviews')
 
+
 const dataController = {
   index (req, res, next) {
     Review.find({}, (err, foundReviews) => {

@@ -17,9 +17,6 @@ const viewController = {
   },
   redirectShow (req, res, next) {
     res.redirect(`${RESOURCE_PATH}/${res.locals.data.review.id}`)
-  },
-  favorite (req, res, next) {
-    res.render('legoreviews/Favorite', res.locals.data)
   }
 }
 

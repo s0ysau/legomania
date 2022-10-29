@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 html {
-    background-image: url("../images/lego_background_one.jpg");
-    background-size: cover;
-    background-position: inherit ;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-color: rgb(5, 168, 148);
+    /* background-color: rgb(5, 168, 148); */
     min-height: 100vh;
 }
 

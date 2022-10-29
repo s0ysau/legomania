@@ -13,6 +13,7 @@ class Default extends React.Component {
         <nav>
           <a className='headerbtn home' href='/legoreviews'>HOME</a>
           <a className='headerbtn newReview' href='/legoreviews/New'>NEW REVIEW</a>
+          <a className='headerbtn product-page' href='/legoproducts'>PRODUCT PAGE</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
           {/* <a className='headerbtn' href='/legoblogs/Favorite'>FAVORITES</a> */}
         </nav>
