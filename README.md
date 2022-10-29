@@ -44,6 +44,12 @@ The table below is how the products and reviews schemas are set up
 
 The Name of the set and the theme/collection along with the link are shared information that is currently separated. 
 
+<h3>Controllers</h3>
+
+
+
+<h3>Views</h3>
+
  <!-- <h2>Home Page</h2>
 ![Alt text](/README/original_wireframe.png "Original wireframe") -->
 

@@ -1,25 +1,23 @@
 const React = require('react')
 
-class Default extends React.Component {
-  render () {
-    // constant
-    const { review, title } = this.props
-    return (
-      <html>
+class Home extends React.Component {
+  render() {
+    return(
+      <>
         <head>
-          <link rel='stylesheet' href='/css/app.css' />
-          <title>{title}</title>
+        <link rel='stylesheet' href='/css/home.css' />
+        <title>Get Bricky</title>
         </head>
         <nav>
-          <a className='headerbtn home' href='/legoreviews'>HOME</a>
-          <a className='headerbtn newReview' href='/legoreviews/New'>NEW REVIEW</a>
+          {/* <a className='headerbtn home' href='/legoreviews'>HOME</a> */}
           <a className='headerbtn product-page' href='/legoproducts'>PRODUCT PAGE</a>
+          <a className='headerbtn newReview' href='/legoreviews/'>REVIEWS PAGE</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
         </nav>
         <main>
           <body>
-            <h1 className='title'>{title}</h1>
-            <p>{this.props.children}</p>
+            <h1>Get your Brick On!</h1>
+            <p>Welcome! Here you can view different Lego sets</p>
           </body>
         </main>
         <footer>
@@ -33,9 +31,9 @@ class Default extends React.Component {
             </a>
           </p>
         </footer>
-      </html>
+      </>
     )
   }
 }
 
-module.exports = Default
+module.exports = Home
