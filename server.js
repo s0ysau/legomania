@@ -4,7 +4,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
 const db = require('./models/db')
-const Product = require('./models/products')
+// const Product = require('./models/products')
 
 // == Configure the app == //
 app.use(express.urlencoded({ extended: true }))
@@ -23,13 +23,13 @@ db.once('open', () => {
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use('/legoreviews', require('./controllers/routeController'))
-
+app.use('/legoproducts', require('./controllers/productsRController'))
 
 // == Middleware == //
 
 
 // == legoproducts Routes == //
-
+/*
 app.get('/legoproducts', (req, res) => {
     Product.find({}, (err, foundProducts) => {
         if (err){
@@ -117,7 +117,7 @@ app.get('/legoproducts/:id', (req,res) => {
 })
 
 
-
+*/
 // == Port == //
 app.listen(3009, function () {
     console.log('Listening on Port 3009')

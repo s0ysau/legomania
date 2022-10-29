@@ -7,14 +7,16 @@ class Editproducts extends React.Component {
     const { nameOfSet, collectionName, description, numberOfPieces, link, image, _id } = this.props.product
     return (
     // Code Block
-      <ProductLayout title={`${nameOfSet}'s Product Edit`} review={this.props.product}>
+      <ProductLayout title={`Edit ${nameOfSet} Information`} review={this.props.product}>
         <form method='POST' action={`/legoproducts/${_id}?_method=PUT`}>
-          Name: <input type='text' name='nameOfSet' defaultValue={nameOfSet} /><br />
-          Collection: <input type='text' name='collectionName' defaultValue={collectionName} /><br />
-          Description: <textarea type='textarea' name='description' defaultValue={description} /><br />
-          # of pieces: <input type='number' name='numberOfPieces' defaultValue={numberOfPieces}/><br />
-          Link: <input type='text' name='link' defaultValue={link} /><br />
-          Image: <input type='text' name='image' defaultChecked={image} /><br/>
+          <div className='show-container'>
+            <span className='type'>Name:</span><input type='text' name='nameOfSet' className='entry' defaultValue={nameOfSet} />
+            <span className='type'>Collection:</span><input type='text' name='collectionName' className='entry' defaultValue={collectionName} />
+            <span className='type'>Description:</span><textarea type='textarea' name='description' className='entry' defaultValue={description} />
+            <span className='type'># of pieces:</span><input type='number' name='numberOfPieces' className='entry' defaultValue={numberOfPieces}/>
+            <span className='type'>Link:</span><input type='text' name='link' className='entry' defaultValue={link} />
+            <span className='type'>Image:</span><input type='text' name='image' className='entry' defaultChecked={image} />
+          </div>
           <input type='submit' value='Edit your Review' />
         </form>
       </ProductLayout>

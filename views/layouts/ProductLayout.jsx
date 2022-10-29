@@ -25,10 +25,10 @@ class ProductLayout extends React.Component {
         <footer>
           <p className='p-footer'>
             <span className='my-name'>Created by Jerrick Lloyd C</span>
-            <a className='github' href='https://github.com/s0ysau'>
+            <a className='github personal-link' href='https://github.com/s0ysau'>
               <img className='image-logo github-logo' src='../images/github-logo.png'/>
             </a> &nbsp;&nbsp;&nbsp;
-            <a className='linkedin' href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>
+            <a className='linkedin personal-link' href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>
               <img className='image-logo linkedin-logo' src='../images/linkedin-logo.png'/>
             </a>
           </p>
