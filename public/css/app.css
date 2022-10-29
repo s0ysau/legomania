@@ -32,6 +32,10 @@ main {
     padding: 12px 20px;
 }
 
+.headerbtn :hover{
+    text-decoration: underline 4px;
+}
+
 ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
@@ -45,6 +49,24 @@ li {
     background-color: rgb(135 135 135);
     border: 10px;
     border-color:darkseagreen;
+    width:auto;
+    height:auto
+}
+
+.product-image {
+    width: 25%;
+    height: 25%;
+}
+
+.index-image {
+    width: 50%;
+    height: 60%;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .show-container {
@@ -63,7 +85,6 @@ li {
 
 
 footer {
-    position: absolute;
     width: 100%;
     bottom: 0;
     height: 2.5rem;
