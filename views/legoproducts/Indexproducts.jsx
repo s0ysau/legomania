@@ -6,8 +6,8 @@ class Indexproducts extends React.Component {
     const { products } = this.props;
     return (
     // Code Block
-      <ProductLayout title='Lego Products Page'>
-        <div className='container-header'>
+      <ProductLayout title='Lego Sets'>
+        <div className='container-main'>
           {
 						products.map((item) => {
             const { nameOfSet, collectionName, image, _id } = item
@@ -15,7 +15,7 @@ class Indexproducts extends React.Component {
               <div key={_id}>
                 <a href={`/legoproducts/${_id}`}>
                 <span><img className='product-image index-image' src={`${image}`}/></span><br/>
-                  The {nameOfSet} Set - {collectionName} Collection
+                <span className='product-name-index'>{nameOfSet}</span>
                 </a>
               </div>
             )

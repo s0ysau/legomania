@@ -1,24 +1,24 @@
 <h1>Get Your Brick On</h1>
 <p>The purpose of this site is to rate and review Lego sets by using CRUD to create, read, update and delete review posts</p>
 
-<h2>Functionality</h2>
+<h2>Organization</h2>
 There are two main scetions of the site: A Product section to display collections of Lego sets and a Review section to post reviews and ratings about the lego set. 
 
 The project is organized by the MVC format. In the project, you will find it divided into three folders: 
 
 <ul>
 <li>
-```js
+```
 models
 ```
 </li>
 <li>
-```js
+```
 views
 ```
 </li>
 <li>
-```js
+```
 controllers
 ```
 </li>
@@ -35,12 +35,12 @@ The table below is how the products and reviews schemas are set up
 
 |     products    |     reviews    |
 |-----------------|----------------|
-|           Name of set            |
+|   Name of set   |  Name of set   |
 |    Name of the theme/collection  |
 |   Description   |    Review      |
 | Number of pieces|     Rating     |
-|                Link              |
-|                 |Is it a favorite|
+|      Link       |      Link      |
+|      N/A        |Is it a favorite|
 
 The Name of the set and the theme/collection along with the link are shared information that is currently separated. 
 
@@ -49,6 +49,40 @@ The Name of the set and the theme/collection along with the link are shared info
 
 
 <h3>Views</h3>
+
+The views section is divided into four (4) folders 
+views
+│   ├── home
+│   │   ├── Home.jsx
+│   ├── layouts
+│   │   ├── Default.jsx
+│   │   ├── Productlayout.jsx
+│   ├── legoproducts
+│   │   ├── Editproducts.jsx
+│   │   ├── Indexproducts.jsx
+│   │   ├── Newproducts.jsx
+│   │   └── Showproducts.jsx
+│   ├── legoreviews
+│   │   ├── Edit.jsx
+│   │   ├── Index.jsx
+│   │   ├── New.jsx
+│   │   └── Show.jsx
+
+<h2>CRUD</h2>
+<h3>Creating</h3>
+
+<h3>Read</h3>
+
+<h3>Updating</h3>
+
+<h3>Delete</h3>
+
+<h2>Ice Box Features</h2>
+<ul>
+<li>Add an API to display more sets</li>
+<li>Create a wishlist</li>
+<li>Add more online stores where the user can buy the product via Amazon, Walmart, etc</li>
+</ul>
 
  <!-- <h2>Home Page</h2>
 ![Alt text](/README/original_wireframe.png "Original wireframe") -->

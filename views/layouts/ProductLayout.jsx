@@ -11,8 +11,9 @@ class ProductLayout extends React.Component {
           <title>{title}</title>
         </head>
         <nav>
-          <a className='headerbtn home' href='/legoproducts'>HOME</a>
-          <a className='headerbtn newReview' href='/legoproducts/New'>NEW PRODUCT</a>
+          <a className='headerbtn home' href='/home'>HOME</a>
+          <a className='headerbtn product-home' href='/legoproducts'>SETS</a>
+          <a className='headerbtn newReview' href='/legoproducts/New'>NEW SET</a>
           <a className='headerbtn product-page' href='/legoreviews'>REVIEWS PAGE</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
         </nav>
