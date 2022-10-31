@@ -1,6 +1,16 @@
 <h1>Get Your Brick On</h1>
 <p>The purpose of this site is to rate and review Lego sets by using CRUD to create, read, update and delete review posts</p>
 
+<h2>Wireframe</h2>
+<h3>Product Page</h3>
+
+![Page1](public/Readme/product_page_WF.png)
+
+<h3>Show individual product</h3>
+
+![Page1](public/Readme/single_product_page.png)
+
+
 <h2>Organization</h2>
 There are two main scetions of the site: A Product section to display collections of Lego sets and a Review section to post reviews and ratings about the lego set. 
 
@@ -46,27 +56,27 @@ The Name of the set and the theme/collection along with the link are shared info
 
 <h3>Controllers</h3>
 
-
+The controller folder is divided into three sections: Data, Route, Views files for the Products, and DRV files for Reviews and an authentication file. 
 
 <h3>Views</h3>
 
 The views section is divided into four (4) folders 
 views
-│   ├── home
-│   │   ├── Home.jsx
-│   ├── layouts
-│   │   ├── Default.jsx
-│   │   ├── Productlayout.jsx
-│   ├── legoproducts
-│   │   ├── Editproducts.jsx
-│   │   ├── Indexproducts.jsx
-│   │   ├── Newproducts.jsx
-│   │   └── Showproducts.jsx
-│   ├── legoreviews
-│   │   ├── Edit.jsx
-│   │   ├── Index.jsx
-│   │   ├── New.jsx
-│   │   └── Show.jsx
+├── home
+│   ├── Home.jsx
+├── layouts
+│   ├── Default.jsx
+│   ├── Productlayout.jsx
+├── legoproducts
+│   ├── Editproducts.jsx
+│   ├── Indexproducts.jsx
+│   ├── Newproducts.jsx
+│   └── Showproducts.jsx
+├── legoreviews
+│   ├── Edit.jsx
+│   ├── Index.jsx
+│   ├── New.jsx
+│   └── Show.jsx
 
 <h2>CRUD</h2>
 <h3>Creating</h3>
