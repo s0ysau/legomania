@@ -4,13 +4,15 @@ const Default = require('../layouts/Default')
 class New extends React.Component {
   render () {
     // A variable if needed
+    const { nameOfSet, collectionName, image } = this.props.review
     return (
     // Code Block
       <Default title='Create a New Review'>
+        <span className='product-image'>{image}</span>
         <form method='POST' action='/legoreviews'>
           <span className='show-container'>
-            <span className='type'>Theme:</span><span className='entry'><input type='text' name='theme' placeholder='Theme set' /></span>
-            <span className='type'>Name:</span><span className='entry'><input type='text' name='name' placeholder='Name of the set' /></span>
+            <span className='type'>Name:</span><span className='entry'>{nameOfSet}</span>
+            <span className='type'>Theme:</span><span className='entry'>{collectionName}</span>
             <span className='type'>Review:</span><span className='entry'><textarea type='textarea' name='review' placeholder='Write your review' /></span>
             <span className='type'>Rating:</span><span className='entry'><div className="rating rating2">
                       <input type='radio' name='rating' className='1' />
@@ -26,7 +28,6 @@ class New extends React.Component {
                     </div> </span>
             {/* <input type='text' name='rating' placeholder='From 1-5'/> */}
             <span className='type'>Favorite:</span><span className='entry'><input type='checkbox' name='isItFavorite' /></span>
-            <span className='type'>Link</span><span className='entry'><input type='text' name='link' /></span>
           </span>
           <input type='submit' value='Submit your Review' />
         </form>

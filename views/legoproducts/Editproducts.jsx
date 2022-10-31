@@ -15,7 +15,7 @@ class Editproducts extends React.Component {
             <span className='type'>Description:</span><textarea type='textarea' name='description' className='entry' defaultValue={description} />
             <span className='type'># of pieces:</span><input type='number' name='numberOfPieces' className='entry' defaultValue={numberOfPieces}/>
             <span className='type'>Link:</span><input type='text' name='link' className='entry' defaultValue={link} />
-            <span className='type'>Image:</span><input type='text' name='image' className='entry' defaultChecked={image} />
+            <span className='type'>Image:</span><input type='text' name='image' className='entry' defaultValue={image} />
           </div>
           <input type='submit' value='Edit your Review' />
         </form>
