@@ -1,35 +1,17 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const reviewSchema = new mongoose.Schema(
+const reviewSchema = new Schema(
   {
   review: { type: String, required: true },
-  rating: { type: String, optional: true },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: 5,
+    required: true
+  },
   isItFavorite: Boolean,  
-  }, {
-  nameOfSet: {
-    type: Schema.Types.nameOfSet,
-    required: true,
-    ref: 'Products'
-    }
-}, {
-  collectionName: {
-    type: Schema.Types.collectionName,
-    required: true,
-    ref: 'Products'
-    }
-}, {
-  link: {
-    type: Schema.Types.link,
-    required: true,
-    ref: 'Products'
-    }
-}, {
-  image: {
-    type: Schema.Types.image,
-    required: true,
-    ref: 'Products'
-    }
 },
   { timestamps: true }
 )

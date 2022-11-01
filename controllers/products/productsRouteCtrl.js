@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const dataController = require('./dataController')
-const viewController = require('./viewController')
+const dataController = require('./productsDataCtrl')
+const viewController = require('./productsViewCtrl')
 
 // API Routes
 // Index
@@ -25,7 +25,5 @@ router.post('/', dataController.create, viewController.redirectShow)
 router.get('/:id/edit', dataController.show, viewController.edit)
 // Show
 router.get('/:id', dataController.show, viewController.show)
-
-
 
 module.exports = router

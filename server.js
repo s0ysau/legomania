@@ -4,7 +4,6 @@ const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
 const db = require('./models/db')
-const Product = require('./models/products')
 
 // == Configure the app == //
 app.use(express.urlencoded({ extended: true }))
@@ -22,8 +21,8 @@ db.once('open', () => {
 // == Middleware == //
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
-app.use('/legoreviews', require('./controllers/routeController'))
-app.use('/legoproducts', require('./controllers/productsRController'))
+// app.use('/legoreviews', require('./controllers/reviews/routeController'))
+app.use('/legoproducts', require('./controllers/products/productsRouteCtrl'))
 
 // == Middleware == //
 

@@ -4,7 +4,7 @@ const ProductLayout = require('../layouts/ProductLayout')
 class Showproducts extends React.Component {
   render () {
     // A variable if needed
-    const { nameOfSet, collectionName, description, numberOfPieces, link, image, _id } = this.props.product
+    const { nameOfSet, collectionName, description, numberOfPieces, link, image, review, _id } = this.props.product
     return (
     // Code Block
       <ProductLayout title={`${nameOfSet} | ${collectionName}`} productVar = {this.props.product}>
@@ -18,7 +18,12 @@ class Showproducts extends React.Component {
         </span><br/>
         <div className='review-section'>
           <span>Average Rating: </span><br/>
-          <a href={`/legoreviews/New`}>Create a review</a>
+          <span>Reviews:</span><br/>
+          <form method='POST' action={`/legoproducts/${_id}?_method=POST`}>
+            <span>My Rating:</span><br/>
+            <textarea type='text' name='review.review' placeholder='Write your Review'/><br/>
+            <input type='submit' value='Submit your Review'/><br/>
+          </form>
         </div>
         <a href={`/legoproducts/${_id}/edit`}>Edit {nameOfSet}</a><br />
         <a className='linkToLegoSite' href={link}>Link on Lego.com</a><br />

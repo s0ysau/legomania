@@ -4,17 +4,17 @@ const ProductLayout = require('../layouts/ProductLayout')
 class Newproducts extends React.Component {
   render () {
     // A variable if needed
-    const handleOpen = () => {
-      setOpen(!open)
-    };
-    const handleDropOne = () => {
-      // code
-      setOpen(false)
-    }
-    const handleDropTwo = () => {
-      // code 
-      setOpen(false)
-    }
+    // const handleOpen = () => {
+    //   setOpen(!open)
+    // };
+    // const handleDropOne = () => {
+    //   // code
+    //   setOpen(false)
+    // }
+    // const handleDropTwo = () => {
+    //   // code 
+    //   setOpen(false)
+    // }
     return (
     // Code Block
       <ProductLayout title='Add a New Lego Set'>
