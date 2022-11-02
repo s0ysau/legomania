@@ -4,10 +4,11 @@ const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
 const db = require('./models/db')
-const productRoute = require('./controllers/products/productsRouteCtrl')
+const productRoute = require('./controllers/set/setsRouteCtrl')
 const reviewRoute = require('./controllers/reviews/reviewsRouteCtrl')
 
 // == Configure the app == //
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.engine('jsx', require('jsx-view-engine').createEngine())
@@ -23,8 +24,8 @@ db.once('open', () => {
 // == Middleware == //
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
-app.use('/legoproducts', productRoute)
-app.use(`/reviews`, reviewRoute)
+app.use('/legoset', productRoute)
+app.use('/reviews', reviewRoute)
 
 // == Middleware == //
 

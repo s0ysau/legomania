@@ -1,15 +1,17 @@
 const React = require('react')
 const Default = require('../layouts/Default')
+const Product = require('../../models/products')
 
 class NewReview extends React.Component {
   render () {
     // A variable if needed
+    
     return (
     // Code Block
       <Default title='Create a New Review'>
-        <span>{product.nameOfSet}</span>
-        <span className='product-image'>{product.image}</span>
-        <form method='POST' action={`/legoproducts/${product.nameOfSet}/review`}>
+        <span>{Product.nameOfSet}</span>
+        <span className='product-image'>{Product.image}</span>
+        <form method='POST' action={`/legoproducts/${Product.nameOfSet}/review`}>
           <span className='show-container'>
             <span className='type'>Overall Rating:</span><span className='entry'>
               <div className="rating rating2" name='rating'>

@@ -6,16 +6,17 @@ class Home extends React.Component {
       <>
         <head>
         <link rel='stylesheet' href='/css/home.css' />
-        <title>Get Bricky</title>
+        <title>Get your Brick On!</title>
         </head>
         <nav>
-          <a className='headerbtn product-page' href='/legoproducts'>PRODUCT PAGE</a>
+          <a className='headerbtn product-page' href='/legoset'>LEGO SETS</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
         </nav>
         <main>
           <body>
             <h1>Get your Brick On!</h1>
-            <p>Welcome! Here you can view different Lego sets and add your own sets</p>
+            <p>Welcome! Here you can view different Lego sets, review them or add your own sets</p><br/>
+            <p>Get Bricky with it!</p>
           </body>
         </main>
         <footer>

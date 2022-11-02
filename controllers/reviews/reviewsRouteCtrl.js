@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const reviewsDataCtrl = require('./reviewsDataCtrl')
-const productsViewCtrl = require('../products/productsViewCtrl')
+const reviewsDataCtrl = require('../reviews/reviewsDataCtrl')
+// const productsViewCtrl = require('../set/setsViewCtrl')
 const reviewsViewCtrl = require('../reviews/reviewsViewCtrl')
 
 
@@ -13,14 +13,18 @@ const reviewsViewCtrl = require('../reviews/reviewsViewCtrl')
 // Show
 
 // non API Routes
-// Index
-router.get('/:nameOfSet/review', reviewsDataCtrl.addReview, reviewsViewCtrl.show)
+// Index 
+router.get('/', reviewsDataCtrl.indexReview, reviewsViewCtrl.indexReview)
+// New
+router.get('/new', reviewsViewCtrl.newView)
+// Show
+router.get('/:id', reviewsDataCtrl.showReview, reviewsViewCtrl.showReview)
 // Delete
-router.delete('/:id', reviewsDataCtrl.deleteReview, productsViewCtrl.redirectHome)
+router.delete('/:id', reviewsDataCtrl.deleteReview, reviewsViewCtrl.redirectHome)
 // Update
-router.put('/:id', reviewsDataCtrl.updateReview, productsViewCtrl.redirectShow)
+router.put('/:id', reviewsDataCtrl.updateReview, reviewsViewCtrl.redirectShow)
 // Create
-router.post('/:id/review', reviewsDataCtrl.addReview, productsViewCtrl.redirectShow)
+router.post('/', reviewsDataCtrl.addReview, reviewsViewCtrl.redirectShow)
 
 
 

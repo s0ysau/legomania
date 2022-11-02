@@ -19,14 +19,14 @@ class Showproducts extends React.Component {
         </span><br/>
         <div className='review-section'>
           <span className='avgRating'>Average Rating: {review.rating}</span><br/>
-          <a className='reviewBtn' href={`/legoproducts/${nameOfSet}/review`}>Write a review</a>
+          <a className='reviewBtn' href={`/legoset/${nameOfSet}/review`}>Write a review</a>
           <span className='allReviews'>
             Reviews:{review.content}
           </span><br/>
         </div>
-        <a href={`/legoproducts/${_id}/edit`}>Edit {nameOfSet}</a><br />
+        <a href={`/legoset/${_id}/edit`}>Edit {nameOfSet}</a><br />
         <a className='linkToLegoSite' href={link}>Link on Lego.com</a><br />
-        <form method='POST' action={`/legoproducts/${_id}?_method=DELETE`}>
+        <form method='POST' action={`/legoset/${_id}?_method=DELETE`}>
           <input type='submit' className='deletebtn' value={`Delete ${nameOfSet}`} />
         </form>
       </ProductLayout>

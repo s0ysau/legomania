@@ -10,14 +10,15 @@ class Index extends React.Component {
         <ul>
           {
 						reviews.map((reviewone) => {
-            const { theme, name, review, rating, _id } = reviewone
+            const { headline, content, rating, product, _id } = reviewone
             return (
               <li key={_id}>
                 <a href={`/legoreviews/${_id}`}>
-                  The {name} Set - {theme} Collection
+                  The {product.nameOfSet} Set - {product.collectionName} Collection
                 </a><br />
                 Rating: {rating}<br />
-                Review: {review}<br />
+                <span>{headline}</span>
+                Review: {content}<br />
               </li>
             )
 						})

@@ -18,7 +18,7 @@ class Newproducts extends React.Component {
     return (
     // Code Block
       <ProductLayout title='Add a New Lego Set'>
-        <form method='POST' action='/legoproducts'>
+        <form method='POST' action='/legoset'>
           <span className='show-container'>
             <span className='type'>Name:</span><input type='text' name='nameOfSet' className='entry' placeholder='Name of the set' />
 

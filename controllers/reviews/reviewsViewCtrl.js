@@ -1,22 +1,22 @@
-const RESOURCE_PATH = '/legoproducts'
+const RESOURCE_PATH = '/reviews'
 const reviewsViewCtrl = {
-  index (req, res, next) {
-    res.render('legoproducts/Indexproducts', res.locals.data)
+  indexReview (req, res, next) {
+    res.render('reviews/IndexReview', res.locals.data)
   },
   newView (req, res, next) {
-    res.render('legoproducts/Newproducts')
+    res.render('reviews/NewReview')
   },
-  edit (req, res, next) {
-    res.render('legoproducts/Editproducts', res.locals.data)
+  editReview (req, res, next) {
+    res.render('reviews/EditReview', res.locals.data)
   },
-  show (req, res, next) {
-    res.render(`legoproducts/${res.locals.data.product.nameOfSet}/review`)
+  showReview (req, res, next) {
+    res.render('reviews/ShowReview', res.locals.data)
   },
   redirectHome (req, res, next) {
     res.redirect(RESOURCE_PATH)
   },
   redirectShow (req, res, next) {
-    res.redirect(`${RESOURCE_PATH}/${res.locals.data.product.id}`)
+    res.redirect(`${RESOURCE_PATH}/${res.locals.data.review.id}`)
   }
 }
 

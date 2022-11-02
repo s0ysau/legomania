@@ -1,16 +1,16 @@
-const RESOURCE_PATH = '/legoproducts'
+const RESOURCE_PATH = '/legoset'
 const productsViewCtrl = {
   index (req, res, next) {
-    res.render('legoproducts/Indexproducts', res.locals.data)
+    res.render('legoset/Indexproducts', res.locals.data)
   },
   newView (req, res, next) {
-    res.render('legoproducts/Newproducts')
+    res.render('legoset/Newproducts')
   },
   edit (req, res, next) {
-    res.render('legoproducts/Editproducts', res.locals.data)
+    res.render('legoset/Editproducts', res.locals.data)
   },
   show (req, res, next) {
-    res.render('legoproducts/Showproducts', res.locals.data)
+    res.render('legoset/Showproducts', res.locals.data)
   },
   redirectHome (req, res, next) {
     res.redirect(RESOURCE_PATH)

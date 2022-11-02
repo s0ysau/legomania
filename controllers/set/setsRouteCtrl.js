@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const dataController = require('./productsDataCtrl')
-const viewController = require('./productsViewCtrl')
+const dataController = require('./setsDataCtrl')
+const viewController = require('./setsViewCtrl')
 
 // API Routes
 // Index

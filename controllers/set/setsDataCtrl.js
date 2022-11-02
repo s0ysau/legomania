@@ -28,25 +28,25 @@ const productDController = {
   },
   update (req, res, next) {
     req.body.isItFavorite = req.body.isItFavorite === 'on'
-    Product.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedproduct) => {
+    Product.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updateProduct) => {
       if (err) {
         res.status(400).send({
           msg: err.message
         })
       } else {
-        res.locals.data.product = updatedproduct
+        res.locals.data.product = updateProduct
         next()
       }
     })
   },
   create (req, res, next) {
-    Product.create(req.body, (err, createdproduct) => {
+    Product.create(req.body, (err, createProduct) => {
       if (err) {
         res.status(400).send({
           msg: err.message
         })
       } else {
-        res.locals.data.product = createdproduct
+        res.locals.data.product = createProduct
         next()
       }
     })

@@ -8,7 +8,7 @@ class Editproducts extends React.Component {
     return (
     // Code Block
       <ProductLayout title={`Edit ${nameOfSet} Information`} review={this.props.product}>
-        <form method='POST' action={`/legoproducts/${_id}?_method=PUT`}>
+        <form method='POST' action={`/legoset/${_id}?_method=PUT`}>
           <div className='show-container'>
             <span className='type'>Name:</span><input type='text' name='nameOfSet' className='entry' defaultValue={nameOfSet} />
             <span className='type'>Collection:</span><input type='text' name='collectionName' className='entry' defaultValue={collectionName} />

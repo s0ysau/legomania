@@ -13,7 +13,7 @@ class Indexproducts extends React.Component {
             const { nameOfSet, collectionName, image, _id } = item
             return (
               <div key={_id}>
-                <a href={`/legoproducts/${_id}`}>
+                <a href={`/legoset/${_id}`}>
                 <span><img className='product-image index-image' src={`${image}`}/></span><br/>
                 <span className='product-name-index'>{nameOfSet}</span>
                 </a>
