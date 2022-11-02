@@ -1,28 +1,29 @@
 const Product = require('../../models/products')
+const Review = require('../../models/reviews')
 
-const reviews = {
+const reviewsDataCtrl = {
   //Add Review
   addReview (req, res, next) {
-    Product.create(req.body, (err, addProductReview) => {
+    Review.create(req.body, (err, addReview) => {
       if (err) {
         res.status(400).send({
           msg: err.message
         })
       } else {
-        addProductReview.reviews.push(req.body)
+        res.locals.data.review = addReview
         next()
       }
     });
   },
   //Update Review 
   updateReview (req, res, next) {
-    Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedProductReview) => {
+    Review.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedReview) => {
         if (err) {
           res.status(400).send({
             msg: err.message
         })
         } else {
-          for (review of updatedProductReview){
+          for (review of updatedReview){
             res.locals.data.review = req.body.review;
             break
           } 
@@ -32,13 +33,13 @@ const reviews = {
     )},
     //Delete Review
     deleteReview (req, res, next){
-      Product.findByIdAndDelete(req.params.id, (err, deleteProductReview) => {
+      Review.findByIdAndDelete(req.params.id, (err, deleteReview) => {
         if (err) {
         res.status(400).send({
           msg: err.message
         })
       } else {
-        res.locals.data.review = deleteProductReview
+        res.locals.data.review = deleteReview
         next()
       }
       })
@@ -46,4 +47,4 @@ const reviews = {
   }
 
 
-module.exports = reviews
+module.exports = reviewsDataCtrl

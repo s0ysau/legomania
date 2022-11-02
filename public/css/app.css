@@ -198,7 +198,27 @@ footer {
 }
 
 .review-section {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     margin: 20px 0;
+}
+
+.avgRating{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.reviewBtn, .allReviews{
+    grid-column: 2/3;
+}
+
+.reviewBtn {
+    grid-row: 1/2;
+}
+
+.allReviews {
+    grid-row: 2/3;
 }
 
 /* footer */

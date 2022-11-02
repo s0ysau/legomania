@@ -1,15 +1,15 @@
 const Product = require('../../models/products')
-
+const Review = require('../../models/reviews')
 
 const productDController = {
   index (req, res, next) {
-    Product.find({}, (err, foundProducts) => {
+    Product.find({}, (err, allProducts) => {
       if (err) {
         res.status(400).send({
           msg: err.message
         })
       } else {
-        res.locals.data.products = foundProducts
+        res.locals.data.products = allProducts
         next()
       }
     })
@@ -52,7 +52,9 @@ const productDController = {
     })
   },
   show (req, res, next) {
-    Product.findById(req.params.id, (err, foundProducts) => {
+    Product.findById({_id: req.params.id})
+    .populate('review')
+    .exec((err, foundProducts) => {
       if (err) {
         res.status(404).send({
           msg: err.message,
@@ -65,9 +67,7 @@ const productDController = {
     })
   }
   // show(req, res, next) {
-  //   Product.findById(req.params.id)
-  //   .populate("Reviews")
-  //   .then((err, foundProducts) => {
+  //   Product.findById(req.params.id, (err, foundProducts) => {
   //     if (err) {
   //       res.status(404).send({
   //         msg: err.message,

@@ -1,5 +1,5 @@
 const RESOURCE_PATH = '/legoproducts'
-const productsVController = {
+const productsViewCtrl = {
   index (req, res, next) {
     res.render('legoproducts/Indexproducts', res.locals.data)
   },
@@ -20,4 +20,4 @@ const productsVController = {
   }
 }
 
-module.exports = productsVController
+module.exports = productsViewCtrl

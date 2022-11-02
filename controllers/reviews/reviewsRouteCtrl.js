@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const reviewsDataCtrl = require('./reviewsDataCtrl')
-const reviewsViewCtrl = require('./reviewsViewCtrl')
+const productsViewCtrl = require('../products/productsViewCtrl')
+const reviewsViewCtrl = require('../reviews/reviewsViewCtrl')
 
 
 // API Routes
@@ -12,12 +13,14 @@ const reviewsViewCtrl = require('./reviewsViewCtrl')
 // Show
 
 // non API Routes
+// Index
+router.get('/:nameOfSet/review', reviewsDataCtrl.addReview, reviewsViewCtrl.show)
 // Delete
-router.delete('/:id', reviewsDataCtrl.deleteReview, reviewsViewCtrl.redirectHome)
+router.delete('/:id', reviewsDataCtrl.deleteReview, productsViewCtrl.redirectHome)
 // Update
-router.put('/:id', reviewsDataCtrl.updateReview, reviewsViewCtrl.redirectShow)
+router.put('/:id', reviewsDataCtrl.updateReview, productsViewCtrl.redirectShow)
 // Create
-router.post('/:id', reviewsDataCtrl.addReview, reviewsViewCtrl.redirectShow)
+router.post('/:id/review', reviewsDataCtrl.addReview, productsViewCtrl.redirectShow)
 
 
 

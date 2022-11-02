@@ -22,8 +22,6 @@ class Newproducts extends React.Component {
           <span className='show-container'>
             <span className='type'>Name:</span><input type='text' name='nameOfSet' className='entry' placeholder='Name of the set' />
 
-
-
             <span className='type'>Collection:</span>
             
               {/* <div className='dropdown'>
