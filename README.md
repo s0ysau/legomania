@@ -10,6 +10,9 @@
 
 ![Page1](public/Readme/single_product_page.png)
 
+<h3>Edit individual product</h3>
+
+![Page1](public/Readme/edit_product_pg.png)
 
 <h2>Organization</h2>
 There are two main scetions of the site: A Product section to display collections of Lego sets and a Review section to post reviews and ratings about the lego set. 
@@ -18,19 +21,19 @@ The project is organized by the MVC format. In the project, you will find it div
 
 <ul>
 <li>
-```
+```js
 models
-```
+  ```
 </li>
 <li>
-```
+```js
 views
-```
+  ```
 </li>
 <li>
-```
+```js
 controllers
-```
+  ```
 </li>
 </ul>
 
