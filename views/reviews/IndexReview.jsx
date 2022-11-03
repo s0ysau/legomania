@@ -3,7 +3,7 @@ const Default = require('../layouts/Default')
 
 class Index extends React.Component {
   render () {
-    const { reviews } = this.props
+    const { reviews, product } = this.props
     return (
     // Code Block
       <Default title='Your Lego Reviews Page'>

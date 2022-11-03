@@ -10,7 +10,7 @@ class Indexproducts extends React.Component {
         <div className='container-main'>
           {
 						products.map((item) => {
-            const { nameOfSet, collectionName, image, _id } = item
+            const { nameOfSet, image, _id } = item
             return (
               <div key={_id}>
                 <a href={`/legoset/${_id}`}>

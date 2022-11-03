@@ -1,4 +1,4 @@
-// const Product = require('../../models/products')
+const Product = require('../../models/products')
 const Review = require('../../models/reviews')
 
 const reviewsDataCtrl = {
@@ -15,36 +15,45 @@ const reviewsDataCtrl = {
       }
     })
   },
-  //Show Review
-  //Add Review
-  addReview (req, res, next) {
-    Review.create(req.body, (err, addReview) => {
+  //Create Review
+  createReview (req, res, next) {
+    Review.create(req.body, (err, createReview) => {
       if (err) {
         res.status(400).send({
           msg: err.message
         })
       } else {
-        res.locals.data.review = addReview
+        res.locals.data.review = createReview
         next()
       }
-    });
+    })
+    // Review.create(req.body, (err, addReview) => {
+    //   if (err) {
+    //     res.status(400).send({
+    //       msg: err.message
+    //     })
+    //   } else {
+    //     res.locals.data.review = addReview
+    //     next()
+    //   }
+    // });
   },
   //Update Review 
-  updateReview (req, res, next) {
-    Review.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedReview) => {
+    updateReview (req, res, next) {
+      Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updateReview) => {
         if (err) {
           res.status(400).send({
             msg: err.message
         })
         } else {
-          for (review of updatedReview){
-            res.locals.data.review = req.body.review;
+          for (oneReview of updateReview.review){
+            res.locals.data.product.review.content = updateReview;
             break
           } 
           next()
         }
-      }
-    )},
+      })
+    },
     //Delete Review
     deleteReview (req, res, next){
       Review.findByIdAndDelete(req.params.id, (err, deleteReview) => {
@@ -58,6 +67,7 @@ const reviewsDataCtrl = {
       }
       })
     },
+    //Show Review
     // showReview (req, res, next) {
     //   Review.findById({_id: req.params.id})
     //   .populate('review')
@@ -81,7 +91,7 @@ const reviewsDataCtrl = {
             output: 'There is no set with that ID'
           })
         } else {
-          res.locals.data.product = foundReviews
+          res.locals.data.product.review.content = foundReviews
           next()
         }
       })

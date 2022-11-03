@@ -7,7 +7,7 @@ class Editproducts extends React.Component {
     const { nameOfSet, collectionName, description, numberOfPieces, link, image, _id } = this.props.product
     return (
     // Code Block
-      <ProductLayout title={`Edit ${nameOfSet} Information`} review={this.props.product}>
+      <ProductLayout title={`Edit ${nameOfSet} Set`} product={this.props.product}>
         <form method='POST' action={`/legoset/${_id}?_method=PUT`}>
           <div className='show-container'>
             <span className='type'>Name:</span><input type='text' name='nameOfSet' className='entry' defaultValue={nameOfSet} />
@@ -17,7 +17,7 @@ class Editproducts extends React.Component {
             <span className='type'>Link:</span><input type='text' name='link' className='entry' defaultValue={link} />
             <span className='type'>Image:</span><input type='text' name='image' className='entry' defaultValue={image} />
           </div>
-          <input type='submit' value='Edit your Review' />
+          <input type='submit' value='Edit Lego Set' />
         </form>
       </ProductLayout>
     )

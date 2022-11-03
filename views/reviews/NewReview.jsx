@@ -5,13 +5,13 @@ const Product = require('../../models/products')
 class NewReview extends React.Component {
   render () {
     // A variable if needed
-    
+    // const { nameOfSet, image, _id } = this.props.product;
     return (
     // Code Block
-      <Default title='Create a New Review'>
+      <Default title={`Create a New Review for ${Product.nameOfSet}`}>
         <span>{Product.nameOfSet}</span>
-        <span className='product-image'>{Product.image}</span>
-        <form method='POST' action={`/legoproducts/${Product.nameOfSet}/review`}>
+        <span><img className='product-image' src={`${Product.image}`}/></span>
+        <form method='POST' action={`/legoset/${Product._id}/review`}>
           <span className='show-container'>
             <span className='type'>Overall Rating:</span><span className='entry'>
               <div className="rating rating2" name='rating'>

@@ -1,7 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const dataController = require('./setsDataCtrl')
-const viewController = require('./setsViewCtrl')
+const setsDataCtrl = require('./setsDataCtrl')
+const setsViewCtrl = require('./setsViewCtrl')
+
+const reviewsDataCtrl = require('../reviews/reviewsDataCtrl')
+
 
 // API Routes
 // Index
@@ -11,19 +14,25 @@ const viewController = require('./setsViewCtrl')
 // Show
 
 // non API Routes
-// Index
-router.get('/', dataController.index, viewController.index)
-// New
-router.get('/new', viewController.newView)
-// Delete
-router.delete('/:id', dataController.destroy, viewController.redirectHome)
-// Update
-router.put('/:id', dataController.update, viewController.redirectShow)
-// Create
-router.post('/', dataController.create, viewController.redirectShow)
-// Edit
-router.get('/:id/edit', dataController.show, viewController.edit)
-// Show
-router.get('/:id', dataController.show, viewController.show)
+// Index set
+router.get('/', setsDataCtrl.index, setsViewCtrl.index)
+// New set
+router.get('/new', setsViewCtrl.newView)
+// Delete set
+router.delete('/:id', setsDataCtrl.destroy, setsViewCtrl.redirectHome)
+// Update set
+router.put('/:id', setsDataCtrl.update, setsViewCtrl.redirectShow)
+// Create set
+router.post('/', setsDataCtrl.create, setsViewCtrl.redirectShow)
+// Edit set
+router.get('/:id/edit', setsDataCtrl.show, setsViewCtrl.edit)
+// Show set
+router.get('/:id', setsDataCtrl.show, setsViewCtrl.show)
+
+// New Review
+router.get('/:id/reviews/new', setsViewCtrl.newReview)
+// Create Review
+router.post('/:id/reviews', reviewsDataCtrl.createReview, setsViewCtrl.redirectShow)
+
 
 module.exports = router
