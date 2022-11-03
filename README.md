@@ -1,5 +1,5 @@
 <h1>Get Your Brick On</h1>
-<p>The purpose of this site is to rate and review Lego sets by using CRUD to create, read, update and delete review posts</p>
+<p>The purpose of this site is to rate and review Lego sets by using CRUD to create, read, update and delete Lego sets and review posts</p>
 
 <h2>Wireframe</h2>
 <h3>Product Page</h3>
@@ -21,17 +21,17 @@ The project is organized by the MVC format. In the project, you will find it div
 
 <ul>
 <li>
-```js
+```JSON
 models
   ```
 </li>
 <li>
-```js
+```JSON
 views
   ```
 </li>
 <li>
-```js
+```JSON
 controllers
   ```
 </li>
@@ -50,20 +50,20 @@ The table below is how the products and reviews schemas are set up
 |-----------------|----------------|
 |   Name of set   |  Name of set   |
 |    Name of the theme/collection  |
-|   Description   |    Review      |
+|   Description   |    content     |
 | Number of pieces|     Rating     |
 |      Link       |      Link      |
-|      N/A        |Is it a favorite|
 
 The Name of the set and the theme/collection along with the link are shared information that is currently separated. 
 
 <h3>Controllers</h3>
 
-The controller folder is divided into three sections: Data, Route, Views files for the Products, and DRV files for Reviews and an authentication file. 
+The controller folder is divided into three sections: Data, Route, Views files for the Products, a Data file for Reviews and an authentication file. The setsRouteCtrl acts the main route for the app.
 
 <h3>Views</h3>
 
 The views section is divided into four (4) folders 
+```JSON
 views
 ├── home
 │   ├── Home.jsx
