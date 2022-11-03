@@ -23,17 +23,17 @@ The project is organized by the MVC format. In the project, you will find it div
 <li>
 ```JSON
 models
-  ```
+```
 </li>
 <li>
 ```JSON
 views
-  ```
+```
 </li>
 <li>
 ```JSON
 controllers
-  ```
+```
 </li>
 </ul>
 
