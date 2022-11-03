@@ -51,23 +51,10 @@ const productDController = {
       }
     })
   },
-  show (req, res, next) {
-    Product.findById({_id: req.params.id})
-    .populate('review')
-    .exec((err, foundProducts) => {
-      if (err) {
-        res.status(404).send({
-          msg: err.message,
-          output: 'There is no set with that ID'
-        })
-      } else {
-        res.locals.data.product = foundProducts
-        next()
-      }
-    })
-  }
-  // show(req, res, next) {
-  //   Product.findById(req.params.id, (err, foundProducts) => {
+  // show (req, res, next) {
+  //   Product.findById({_id: req.params.id})
+  //   .populate('review')
+  //   .exec((err, foundProducts) => {
   //     if (err) {
   //       res.status(404).send({
   //         msg: err.message,
@@ -79,6 +66,19 @@ const productDController = {
   //     }
   //   })
   // }
+  show(req, res, next) {
+    Product.findById(req.params.id, (err, foundProducts) => {
+      if (err) {
+        res.status(404).send({
+          msg: err.message,
+          output: 'There is no set with that ID'
+        })
+      } else {
+        res.locals.data.product = foundProducts
+        next()
+      }
+    })
+  }
 }
 
 module.exports = productDController

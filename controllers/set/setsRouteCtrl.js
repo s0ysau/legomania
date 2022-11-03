@@ -3,7 +3,6 @@ const router = express.Router()
 const setsDataCtrl = require('./setsDataCtrl')
 const setsViewCtrl = require('./setsViewCtrl')
 
-const reviewsDataCtrl = require('../reviews/reviewsDataCtrl')
 
 
 // API Routes
@@ -31,8 +30,14 @@ router.get('/:id', setsDataCtrl.show, setsViewCtrl.show)
 
 // New Review
 router.get('/:id/reviews/new', setsViewCtrl.newReview)
+// Delete Review
+// router.delete('/:id/reviews')
+// Update Review
+// router.put('/:id/reviews')
 // Create Review
-router.post('/:id/reviews', reviewsDataCtrl.createReview, setsViewCtrl.redirectShow)
+router.post('/:id/reviews', setsDataCtrl.show, setsViewCtrl.redirectShow)
+// Edit Review
+// router.get('/:id/reviews/edit')
 
 
 module.exports = router

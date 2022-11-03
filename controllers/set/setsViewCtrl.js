@@ -19,7 +19,7 @@ const productsViewCtrl = {
     res.redirect(`${RESOURCE_PATH}/${res.locals.data.product.id}`)
   },
   newReview (req, res, next) {
-    res.render('reviews/NewReview')
+    res.render('reviews/NewReview', res.locals.data)
   }
 }
 

@@ -14,7 +14,7 @@ class Showproducts extends React.Component {
               <span className='type'>Description: </span> 
               <span className='entry'> {product.description}</span>
             </div>
-            <div className='number-of-pieces-line'><span className='type'>Number of Pieces: </span> <span className='entry'> {product.numberOfPieces}</span></div>
+            <div className='number-of-pieces-line'><span className='type'>Number of Pieces: </span><span className='entry'> {product.numberOfPieces}</span></div>
         </span><br/>
         <div className='review-section'>
           <span className='avgRating'>Average Rating: {product.review.rating}</span><br/>
