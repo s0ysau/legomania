@@ -80,6 +80,7 @@ views
 │   ├── Index.jsx
 │   ├── New.jsx
 │   └── Show.jsx
+```
 
 <h2>CRUD</h2>
 <h3>Creating</h3>
