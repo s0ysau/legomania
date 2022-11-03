@@ -11,6 +11,8 @@ class Home extends React.Component {
         <nav>
           <a className='headerbtn product-page' href='/legoset'>LEGO SETS</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
+          <a className='headerbtn log-in'>LOG IN</a>
+          <a className='headerbtn sign-up'>SIGN UP</a>
         </nav>
         <main>
           <body>

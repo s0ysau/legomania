@@ -30,6 +30,8 @@ nav {
 }
 
 .headerbtn {
+  width: 120px;
+  height: 40px;
   padding: 12px 20px;
   text-decoration: none;
   color: black;
@@ -60,9 +62,28 @@ nav {
   background-repeat: no-repeat;
 }
 
+/* .auth-container {
+  display: flex;
+} */
+
+.log-in {
+  background-image: url('../images/lego-brick-purple.png');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 12px 50px;
+  margin: 0 10px;
+}
+
+.sign-up {
+  background-image: url('../images/lego-brick-grey.png');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 12px 50px;
+}
+
 /* header */
-
-
 
 
 /* footer */
