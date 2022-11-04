@@ -4,17 +4,17 @@
 <h2>Wireframe</h2>
 <h3>Lego Set Page</h3>
 
-![Page1](public/Readme/product_page_WF.png)
+![Page1](public/Readme/product_page_WF.png) {width: 600px; height: 300px; }
 
 <h3>Show individual product</h3>
 
-![Page1](public/Readme/single_product_page.png)
-![Page2](public/Readme/show_productpg_final.png)
+![Page1](public/Readme/single_product_page.png) {width: 600px; height: 300px; }
+![Page2](public/Readme/show_productpg_final.png) {width: 600px; height: 300px; }
 
 <h3>Edit individual product</h3>
 
-![Page1](public/Readme/edit_product_pg.png)
-![Page2](public/Readme/edit_productpg_final.png)
+![Page1](public/Readme/edit_product_pg.png) {width: 600px; height: 300px; }
+![Page2](public/Readme/edit_productpg_final.png) {width: 600px; height: 300px; }
 
 <h2>Organization</h2>
 There are two main scetions of the site: A Product section to display collections of Lego sets and a Review section to post reviews and ratings about the lego set. 
@@ -42,7 +42,7 @@ The Name of the set and the theme/collection along with the link are shared info
 
 <h3>Views</h3>
 The views section is divided into four (4) folders 
-```JSON
+```json
 views
 ├── home
 │   ├── Home.jsx
