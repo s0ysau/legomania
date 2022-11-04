@@ -71,6 +71,23 @@ nav {
     background-repeat: no-repeat;
 }
 
+.log-in {
+    background-image: url('../images/lego-brick-purple.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 12px 50px;
+    margin-right: -30px;
+}
+
+.sign-up {
+    background-image: url('../images/lego-brick-grey.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 12px 50px;
+}
+
 /* header */
 
 
