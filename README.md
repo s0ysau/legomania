@@ -197,6 +197,22 @@ For now, the user will have the ability to delete the product from the show page
 
 <img width="152" alt="Screenshot 2022-11-04 at 9 59 10 AM" src="https://user-images.githubusercontent.com/105724406/199990601-3cd4fccd-e759-4c4c-96e2-28150a7bdf85.png">
 
+Below is the piece of code that allows the user to delete a product-set
+
+```
+  destroy (req, res, next) {
+    Product.findByIdAndDelete(req.params.id, (err, deleteProduct) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
+        })
+      } else {
+        res.locals.data.product = deleteProduct
+        next()
+      }
+    })
+  },
+```
 
 <h2>Ice Box Features</h2>
 <ul>
