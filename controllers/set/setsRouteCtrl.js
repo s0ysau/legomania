@@ -3,7 +3,13 @@ const router = express.Router()
 const setsDataCtrl = require('./setsDataCtrl')
 const setsViewCtrl = require('./setsViewCtrl')
 
-
+// router.use((req, res, next) => {
+//   if (req.session.loggedIn) {
+//     next()
+//   } else {
+//     res.redirect('/user/login')
+//   }
+// })
 
 // API Routes
 // Index
