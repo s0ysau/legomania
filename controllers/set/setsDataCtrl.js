@@ -27,7 +27,6 @@ const productDController = {
     })
   },
   update (req, res, next) {
-    req.body.isItFavorite = req.body.isItFavorite === 'on'
     Product.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updateProduct) => {
       if (err) {
         res.status(400).send({
