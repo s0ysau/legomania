@@ -135,15 +135,60 @@ For now, the user can input the collection name but the end goal is to provide a
 <h4>Reading a Lego Set</h4>
 The user can view the individual product-set with the name of the set and collection. Within the view page, the user will be able, in the future, to view reviews from other users and make create their own reviews. 
 
+```
+  show(req, res, next) {
+    Product.findById(req.params.id, (err, foundProducts) => {
+      if (err) {
+        res.status(404).send({
+          msg: err.message,
+          output: 'There is no set with that ID'
+        })
+      } else {
+        res.locals.data.product = foundProducts
+        next()
+      }
+    })
+  }
+}
+```
 
+Below is a piece of code commented out that would display the multiple reviews in the product-set show page.
 
+```
+show (req, res, next) {
+  Product.findById({_id: req.params.id})
+    .populate('review')
+    .exec((err, foundProducts) => {
+      if (err) {
+        res.status(404).send({
+        msg: err.message,
+        output: 'There is no set with that ID'
+        })
+     } else {
+       res.locals.data.product = foundProducts
+       next()
+     }
+  })
+}
+```
 
 <h3>Updating</h3>
 <h4>Updating an existing Lego Set</h4>
 The user will have the ability to update any existing product-set currently on the site. They can fill out all required fields with a link to a site for potential purchase and an image.
 
 ```
-
+  update (req, res, next) {
+    Product.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updateProduct) => {
+      if (err) {
+        res.status(400).send({
+          msg: err.message
+        })
+      } else {
+        res.locals.data.product = updateProduct
+        next()
+      }
+    })
+  },
 ```
 
 <h3>Delete</h3>
