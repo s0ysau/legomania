@@ -23,8 +23,16 @@ const reviewsDataCtrl = {
           msg: err.message
         })
       } else {
-        res.locals.data.review = createReview
-        next()
+        Product.findByIdAndUpdate(req.params.id, {$push: {review:createReview._id}}, { new: true }, (err, updateReview) => {
+          if (err) {
+            res.status(400).send({
+              msg: err.message
+            })
+          } else {
+            res.locals.data.product = createReview
+            next()
+          }
+        })
       }
     })
     // Review.create(req.body, (err, addReview) => {

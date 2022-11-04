@@ -7,13 +7,14 @@ const Review = require('../../models/reviews')
 class NewReview extends React.Component {
   render () {
     // A variable if needed
+    console.log(this.props)
     // const { nameOfSet, image, _id } = this.props.product;
     return (
     // Code Block
       <ProductLayout title={`Create a New Review for ${Product.nameOfSet}`}>
         <span>{Product.nameOfSet}</span>
         <span><img className='product-image' src={`${Product.image}`}/></span>
-        <form method='POST' action={`/legoset/:id`}>
+        <form method='POST' action={`/legoset/${this.props.id}`}>
           <span className='show-container'>
             <span className='type'>Overall Rating:</span>
               <span className='entry'>

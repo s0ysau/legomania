@@ -4,7 +4,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
 const db = require('./models/db')
-const productRoute = require('./controllers/set/setsRouteCtrl')
+const setsRoute = require('./controllers/set/setsRouteCtrl')
 
 // == Configure the app == //
 
@@ -23,7 +23,7 @@ db.once('open', () => {
 // == Middleware == //
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
-app.use('/legoset', productRoute)
+app.use('/legoset', setsRoute)
 
 // == Middleware == //
 

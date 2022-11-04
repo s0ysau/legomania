@@ -11,6 +11,7 @@ class Default extends React.Component {
           <title>{title}</title>
         </head>
         <nav>
+          <a className='headerbtn lego-head'></a>
           <a className='headerbtn home' href='/home'>HOME</a>
           <a className='headerbtn newReview' href='/reviews/New'>NEW REVIEW</a>
           <a className='headerbtn product-home' href='/legoset'>SETS</a>

@@ -9,6 +9,7 @@ class Home extends React.Component {
         <title>Get your Brick On!</title>
         </head>
         <nav>
+          <a className='headerbtn lego-head'></a>
           <a className='headerbtn product-page' href='/legoset'>LEGO SETS</a>
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
           <a className='headerbtn log-in'>LOG IN</a>
@@ -16,9 +17,10 @@ class Home extends React.Component {
         </nav>
         <main>
           <body>
-            <h1>Get your Brick On!</h1>
-            <p>Welcome! Here you can view different Lego sets, review them or add your own sets</p><br/>
-            <p>Get Bricky with it!</p>
+            <div className='main-body'>
+              <h1 className='home-title'>Get your Brick On!</h1>
+              <p className='body-para'>Welcome! Here you can view different Lego sets and add your own sets</p><br/>
+            </div>
           </body>
         </main>
         <footer>

@@ -19,6 +19,7 @@ const productsViewCtrl = {
     res.redirect(`${RESOURCE_PATH}/${res.locals.data.product.id}`)
   },
   newReview (req, res, next) {
+    res.locals.data.id = req.params.id
     res.render('reviews/NewReview', res.locals.data)
   }
 }

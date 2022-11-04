@@ -93,22 +93,8 @@ For now, the user can input the collection name but the end goal is to provide a
 https://trello.com/b/NyWmJcSP/ga-project-2
 <h3>Drawings!</h3>
 For the links in the header, I decided to draw out the bricks and set them as the buttons background to give it a nice aethetic touch. 
- <!-- <h2>Home Page</h2>
-![Alt text](/README/original_wireframe.png "Original wireframe") -->
 
-<!-- Above is the basic setup for the main page of the site. For now, the six boxes are potential Lego set pics.
-
-To simplify the scale, I want to start with one theme collection and expand using a API. 
-
-☐ Screenshot(s): Images of your actual app.
-
-☐ Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS...
-
-☐ Getting Started: In this section include the link to your deployed app and any instructions you deem important.
-
-☐ Next Steps: Planned future enhancements (icebox items).
-
-☐ Restful route table -->
+<!-- Restful route table -->
 
 <!-- | Action |       URL      | HTTP Verb | JSX View |     Mongoose Method      |
 |--------|----------------|-----------|----------|--------------------------|

@@ -35,7 +35,7 @@ router.get('/:id/reviews/new', setsViewCtrl.newReview)
 // Update Review
 // router.put('/:id/reviews')
 // Create Review
-router.post('/:id/reviews', setsDataCtrl.show, setsViewCtrl.redirectShow)
+router.post('/:id', setsDataCtrl.show, setsViewCtrl.redirectShow)
 // Edit Review
 // router.get('/:id/reviews/edit')
 

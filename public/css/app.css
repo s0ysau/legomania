@@ -20,13 +20,20 @@ nav {
 }
 
 .headerbtn {
-    padding: 12px 50px;
+    padding: 12px 40px;
     text-decoration: none;
     color: black;
 }
 
 .headerbtn a:hover{
     text-decoration: underline 4px;
+}
+
+.lego-head {
+    background-image: url('../images/legohead.png');
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .home {

@@ -10,10 +10,10 @@ const reviewSchema = new Schema(
     min: 1,
     max: 5,
   },
-  product: [{
+  product: {
     type: Schema.Types.ObjectId,
     ref: 'products'
-  }]
+  }
 },
   { timestamps: true }
 )

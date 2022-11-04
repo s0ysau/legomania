@@ -41,6 +41,14 @@ nav {
   text-decoration: underline 4px;
 }
 
+.lego-head {
+  background-image: url('../images/legohead.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 10px;
+}
+
 .product-page {
   background-image: url('../images/lego-brick-red.png');
   background-size: auto;
@@ -72,7 +80,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   padding: 12px 50px;
-  margin: 0 10px;
+  margin-right: -30px;
 }
 
 .sign-up {
@@ -84,8 +92,31 @@ nav {
 }
 
 /* header */
+/* body */
+
+.main-body {
+  display: flex;
+  background-image: url('../images/lego_background_one.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.home-title {
+  flex-wrap: wrap;
+}
+
+.body-para {
+  flex-wrap: wrap;
+}
 
 
+/* body */
 /* footer */
 footer {
   width: 100%;
