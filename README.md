@@ -27,7 +27,7 @@
 <h2>Organization</h2>
 There are two main scetions of the site: A Product section to display collections of Lego sets and a Review section to post reviews and ratings about the lego set. 
 
-The project is organized by the MVC format. In the project, you will find it divided into three folders: 
+The project is organized by the MVC format. 
 
 <h3>Models</h3>
 There are three models.js files.
@@ -35,6 +35,7 @@ There are three models.js files.
 <li>db.js - For the database</li>
 <li>products.js - For the Product information</li>
 <li>reviews.js - For the Reviews </li>
+<li>user.js - For the User fields </li>
 </ul>
 
 <h3>ERD</h3>
@@ -79,10 +80,17 @@ const reviewSchema = new Schema(
 )
 ```
 
-The Name of the set and the theme/collection along with the link are shared information that is currently separated. 
+user.js 
+
+```
+const userSchema = new Schema ({
+  username: { type: String, required: true, unique: true},
+  password: { type: String, required: true}
+})
+```
 
 <h3>Views</h3>
-The views section is divided into four (4) folders:
+The views section is divided into five (5) folders:
 
 ```
 views
@@ -101,6 +109,9 @@ views
 │   ├── IndexReview.jsx
 │   ├── NewReview.jsx
 │   └── ShowReview.jsx
+├── user
+│   ├── Login.jsx
+│   ├── Signup.jsx
 ```
 
 <h3>Controllers</h3>
