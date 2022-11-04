@@ -107,8 +107,20 @@ views
 
 The controller folder is divided into three sections: Data, Route, Views files for the Products, a Data file for Reviews and an authentication file. The setsRouteCtrl acts the main route for the app.
 
+```
+controllers
+├── reviews
+│   ├── reviewsDataCtrl.js
+├── set
+│   ├── setsDataCtrl.js
+│   ├── setsRouteCtrl.js
+│   ├── setsViewsCtrl.js
+├── apiController.js
+├── authController.js
+```
 
 <h2>CRUD</h2>
+
 <h3>Creating</h3>
 <h4>Adding a new Lego Set</h4>
 Users have the ability to add any Lego set by clicking the "New Set" link in the header. The user will then be ability to enter the necessary information.
@@ -218,6 +230,7 @@ Below is the piece of code that allows the user to delete a product-set
 <ul>
   <li>Continue to fix the connection between the product-set and reviews for them</li>
   <li>Display multiple reviews on the product-set show page.</li>
+  <li>Apply CRUD functionality to reviews</li>
   <li>Add an API to display more sets</li>
   <li>Create a wishlist</li>
   <li>Add more online stores where the user can buy the product via Amazon, Walmart, etc</li>
