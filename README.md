@@ -40,7 +40,7 @@ There are three models.js files.
 
 <h3>ERD</h3>
 
-![LegoMania ERD Diagram](https://user-images.githubusercontent.com/105724406/200001662-0994b22a-4ab5-4f20-bced-eccdd4329981.png)
+![LegoMania ERD Diagram](./public/Readme/LegoMania%20ERD%20Diagram.png)
 
 products.js
 
@@ -248,8 +248,10 @@ Below is the piece of code that allows the user to delete a product-set
 </ul>
 
 <h2>Etc...</h2>
+
 <h3>Trello</h3>
 https://trello.com/b/NyWmJcSP/ga-project-2
+
 <h3>Drawings!</h3>
 For the links in the header, I decided to draw out the head and bricks and set them as the buttons background to give it a nice aethetic touch. 
 
