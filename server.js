@@ -7,6 +7,7 @@ const db = require('./models/db')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const setsRoute = require('./controllers/set/setsRouteCtrl')
+const PORT = process.env.PORT || 8000
 
 
 // == Configure the app == //
@@ -48,5 +49,9 @@ app.get('/home', (req, res) => {
 // == Port == //
 app.listen(3009, function () {
     console.log('Listening on Port 3009')
+})
+
+app.listen(PORT, () => {
+    console.log('We gettin Bricky in here', PORT)
 })
 
