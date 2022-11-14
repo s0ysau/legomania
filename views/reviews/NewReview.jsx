@@ -1,20 +1,17 @@
 const React = require('react')
-// const Default = require('../layouts/Default')
 const ProductLayout = require('../layouts/ProductLayout')
-const Product = require('../../models/products')
-const Review = require('../../models/reviews')
 
 class NewReview extends React.Component {
   render () {
     // A variable if needed
     console.log(this.props)
-    // const { nameOfSet, image, _id } = this.props.product;
+    const { nameOfSet, image, _id } = this.props.product
     return (
     // Code Block
-      <ProductLayout title={`Create a New Review for ${Product.nameOfSet}`}>
-        <span>{Product.nameOfSet}</span>
-        <span><img className='product-image' src={`${Product.image}`}/></span>
-        <form method='POST' action={`/legoset/${this.props.id}`}>
+      <ProductLayout title={`Create a New Review for ${nameOfSet}`} product={this.props.product}>
+        <span>{nameOfSet}</span>
+        <span><img className='product-image' src={`${image}`}/></span>
+        <form method='POST' action={`/legoset/${_id}`}>
           <span className='show-container'>
             <span className='type'>Overall Rating:</span>
               <span className='entry'>
@@ -24,7 +21,7 @@ class NewReview extends React.Component {
               
               <div className="rating rating2" name='rating'>
                 
-                <input type='radio' name='rating' value='1' title="Give 1 star"/><span className='1'>★</span>
+                <input type='radio' name='rating' className='1' value='1' title="Give 1 star"/><span className='1'>★</span>
                 
                 <input type='radio' name='rating' className='2' value='2' title="Give 2 stars"/><span className='2'>★</span>
                 

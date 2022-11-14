@@ -1,5 +1,4 @@
 const Product = require('../../models/products')
-const Review = require('../../models/reviews')
 
 const productDController = {
   index (req, res, next) {
@@ -50,27 +49,26 @@ const productDController = {
       }
     })
   },
-  // show (req, res, next) {
-  //   Product.findById({_id: req.params.id})
-  //   .populate('review')
-  //   .exec((err, foundProducts) => {
-  //     if (err) {
-  //       res.status(404).send({
-  //         msg: err.message,
-  //         output: 'There is no set with that ID'
-  //       })
-  //     } else {
-  //       res.locals.data.product = foundProducts
-  //       next()
-  //     }
-  //   })
-  // }
   show(req, res, next) {
     Product.findById(req.params.id, (err, foundProducts) => {
       if (err) {
         res.status(404).send({
           msg: err.message,
           output: 'There is no set with that ID'
+        })
+      } else {
+        res.locals.data.product = foundProducts
+        next()
+      }
+    })
+  },
+  showReviews (req, res, next) {
+    Product.findById({_id: req.params.id})
+    .populate('review')
+    .exec((err, foundProducts) => {
+      if (err) {
+        res.status(404).send({
+          msg: err.message
         })
       } else {
         res.locals.data.product = foundProducts

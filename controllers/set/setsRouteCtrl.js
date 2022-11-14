@@ -21,21 +21,34 @@ router.use((req, res, next) => {
 // non API Routes
 // Index set
 router.get('/', setsDataCtrl.index, setsViewCtrl.index)
+
+
 // New set
 router.get('/new', setsViewCtrl.newView)
+// New Review
+router.get('/:id/reviews/new', setsDataCtrl.show, setsViewCtrl.newReview)
+
+
 // Delete set
 router.delete('/:id', setsDataCtrl.destroy, setsViewCtrl.redirectHome)
+
+
 // Update set
 router.put('/:id', setsDataCtrl.update, setsViewCtrl.redirectShow)
+
+
 // Create set
 router.post('/', setsDataCtrl.create, setsViewCtrl.redirectShow)
+
+
 // Edit set
 router.get('/:id/edit', setsDataCtrl.show, setsViewCtrl.edit)
+
+
 // Show set
 router.get('/:id', setsDataCtrl.show, setsViewCtrl.show)
 
-// New Review
-router.get('/:id/reviews/new', setsViewCtrl.newReview)
+
 // Delete Review
 // router.delete('/:id/reviews')
 // Update Review
