@@ -37,6 +37,27 @@ const productDController = {
       }
     })
   },
+  // updateReview (req, res, next) {
+  //   Product.findById(req.params.id, (err, foundProducts) => {
+  //     if (err) {
+  //       res.status(400).send({
+  //         msg: err.message
+  //       })
+  //     } else {
+  //       foundProducts.review.push(req.body)
+  //       Product.findByIdAndUpdate(req.params.id, foundProducts, { new: true }, (err, updateProduct) => {
+  //         if (err) {
+  //           res.status(400).send({
+  //           msg: err.message
+  //           })
+  //         } else {
+  //           res.locals.data.product.review = updateProduct
+  //           next()
+  //         }
+  //       })
+  //     }
+  //   })
+  // },
   create (req, res, next) {
     Product.create(req.body, (err, createProduct) => {
       if (err) {
@@ -62,20 +83,20 @@ const productDController = {
       }
     })
   },
-  showReviews (req, res, next) {
-    Product.findById({_id: req.params.id})
-    .populate('review')
-    .exec((err, foundProducts) => {
-      if (err) {
-        res.status(404).send({
-          msg: err.message
-        })
-      } else {
-        res.locals.data.product = foundProducts
-        next()
-      }
-    })
-  }
+  // showReviews (req, res, next) {
+  //   Product.findById({_id: req.params.id})
+  //   .populate('review')
+  //   .exec((err, foundProducts) => {
+  //     if (err) {
+  //       res.status(404).send({
+  //         msg: err.message
+  //       })
+  //     } else {
+  //       res.locals.data.product = foundProducts
+  //       next()
+  //     }
+  //   })
+  // }
 }
 
 module.exports = productDController

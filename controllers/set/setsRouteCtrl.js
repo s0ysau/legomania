@@ -53,8 +53,10 @@ router.get('/:id', setsDataCtrl.show, setsViewCtrl.show)
 // router.delete('/:id/reviews')
 // Update Review
 // router.put('/:id/reviews')
+
 // Create Review
-router.post('/:id', setsDataCtrl.show, setsViewCtrl.redirectShow)
+router.post('/:id', setsDataCtrl.show , setsViewCtrl.redirectShow)
+
 // Edit Review
 // router.get('/:id/reviews/edit')
 

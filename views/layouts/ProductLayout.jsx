@@ -18,6 +18,7 @@ class ProductLayout extends React.Component {
           <a className='headerbtn legoLink' href='https://www.lego.com/en-us'>LEGO.COM</a>
           <a className='headerbtn log-in' href='/user/login'>LOG IN</a>
           <a className='headerbtn sign-up' href='/user/signup'>SIGN UP</a>
+          <a className='headerbtn sign-out' href='/user/logout'>LOG OUT</a>
         </nav>
         <main>
           <body>

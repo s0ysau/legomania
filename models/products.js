@@ -9,19 +9,9 @@ const productSchema = new Schema({
   link: { type: String, required: true },
   image: { type: String, required: true },
   review: [{
-    headline: { type: String, required: true },
-    content: { type: String, required: true },
-    rating: {
-      type: Number,
-      min: 1,
-      max: 5,
-    },
-    product: {
-      type: Schema.Types.ObjectId,
-      ref: 'products'
-    }
-  },
-    { timestamps: true }]
+    type: Schema.Types.ObjectId,
+    ref: 'reviews'
+  }]
 })
 
 const Products = mongoose.model('products', productSchema)

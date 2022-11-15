@@ -9,8 +9,7 @@ class NewReview extends React.Component {
     return (
     // Code Block
       <ProductLayout title={`Create a New Review for ${nameOfSet}`} product={this.props.product}>
-        <span>{nameOfSet}</span>
-        <span><img className='product-image' src={`${image}`}/></span>
+        <span><img className='product-image image-center' src={`${image}`}/></span>
         <form method='POST' action={`/legoset/${_id}`}>
           <span className='show-container'>
             <span className='type'>Overall Rating:</span>
@@ -19,7 +18,7 @@ class NewReview extends React.Component {
 
 
               
-              <div className="rating rating2" name='rating'>
+              <div className="rating rating2">
                 
                 <input type='radio' name='rating' className='1' value='1' title="Give 1 star"/><span className='1'>★</span>
                 
