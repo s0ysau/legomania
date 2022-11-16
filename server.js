@@ -6,7 +6,7 @@ const app = express()
 const db = require('./models/db')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
-const setsRoute = require('./controllers/set/setsRouteCtrl')
+const setsRoute = require('./controllers/setsRouteCtrl')
 const PORT = process.env.PORT || 8000
 
 
