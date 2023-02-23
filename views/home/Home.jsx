@@ -20,6 +20,9 @@ class Home extends React.Component {
             <div className='main-body'>
               <h1 className='home-title'>Get your Brick On!</h1>
               <p className='body-para'>Welcome! Here you can view different Lego sets and add your own sets</p><br/>
+              <p className='body-para'>This site is currently going through a major redevelopment but you can still check it out</p><br/>
+              <p className='body-para'>username: test</p>
+              <p className='body-para'>password: test</p>
             </div>
           </body>
         </main>
