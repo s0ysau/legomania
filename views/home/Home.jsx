@@ -29,7 +29,7 @@ class Home extends React.Component {
         <footer>
           <p className='p-footer'>
             <span className='my-name'>Created by Jerrick Lloyd C</span>
-            <a className='github personal-link' href='https://github.com/s0ysau/legomania'>
+            <a className='github personal-link' href='https://github.com/s0ysau/bricky4legos'>
               <img className='image-logo github-logo' src='../images/github-logo.png'/>
             </a> &nbsp;&nbsp;&nbsp;
             <a className='linkedin personal-link' href='https://www.linkedin.com/in/jerrick-lloyd-carandang/'>
